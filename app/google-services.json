@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "160964629915",
+    "firebase_url": "https://pinstagram-af486.firebaseio.com",
+    "project_id": "pinstagram-af486",
+    "storage_bucket": "pinstagram-af486.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160964629915:android:d8d5868221c7140aa77d3e",
+        "android_client_info": {
+          "package_name": "com.example.letusmeet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "160964629915-vu7ud7p8lilhfufr06n4lv191hmkqtub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKoO17hkI7NlLONy3_7ceNQCQ78Wl4Ub0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "160964629915-vu7ud7p8lilhfufr06n4lv191hmkqtub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160964629915:android:1bc566601be0d534a77d3e",
+        "android_client_info": {
+          "package_name": "com.example.shrutirawal.pinstagramtheinstaclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "160964629915-aa8ifshl6csmjdu30ptmttv7dkekvbtk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shrutirawal.pinstagramtheinstaclone",
+            "certificate_hash": "908a109c2f91eb719989592b7ab497204482190f"
+          }
+        },
+        {
+          "client_id": "160964629915-vu7ud7p8lilhfufr06n4lv191hmkqtub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKoO17hkI7NlLONy3_7ceNQCQ78Wl4Ub0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "160964629915-vu7ud7p8lilhfufr06n4lv191hmkqtub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
