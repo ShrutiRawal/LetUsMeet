@@ -92,6 +92,7 @@ public class LoginActivity extends AppCompatActivity {
                             startActivity(intent);
 
                         } else {
+                            progressBar.setVisibility(View.GONE);
                             Toast.makeText(LoginActivity.this, task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
