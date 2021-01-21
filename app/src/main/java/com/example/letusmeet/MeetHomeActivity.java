@@ -5,12 +5,19 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.jitsi.meet.sdk.JitsiMeet;
+import org.jitsi.meet.sdk.JitsiMeetActivity;
+import org.jitsi.meet.sdk.JitsiMeetConferenceOptions;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class MeetHomeActivity extends AppCompatActivity {
 
@@ -42,5 +49,49 @@ public class MeetHomeActivity extends AppCompatActivity {
             }
         });
 
+        URL serverUrl;
+
+        try {
+            serverUrl = new URL("https://meet.jit.si");
+            JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder().setServerURL(serverUrl).setWelcomePageEnabled(false).build();
+            JitsiMeet.setDefaultConferenceOptions(options);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+
+        btnjoin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String code = txtCode.getText().toString();
+                if(validateCode(code)){
+                    joinCall(code);
+                }
+            }
+        });
+
+        btncreate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String code = txtCode.getText().toString();
+                if(validateCode(code)){
+                    joinCall(code);
+                }
+            }
+        });
+
+
+    }
+
+    public void joinCall(String code){
+        JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder().setRoom(code).setWelcomePageEnabled(false).build();
+        JitsiMeetActivity.launch(MeetHomeActivity.this,options);
+    }
+
+    private boolean validateCode(String code) {
+        if(code == null || code.trim().length() == 0){
+            Toast.makeText(this, "Code is required", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
     }
 }
